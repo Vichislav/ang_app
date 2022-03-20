@@ -10,7 +10,7 @@ import {UserService} from "./services/user.service";
 export class AppComponent {
   title = 'ang_app';
 
-  name?: string;
+  name: string = '';
   age?: number;
 
   users: User[] = [];
@@ -18,11 +18,10 @@ export class AppComponent {
   constructor(private userService: UserService) {
       this.users = this.userService.getUsers();
   }
-  addUser(): void {
-      if (this.name != null) {
-        if (this.age != null) {
-          this.users.push(new User(this.name, this.age))
-        }
-      }
+  addUser() {
+    if (this.age != null) {
+      this.users.push(new User(this.name, this.age))
+    }
+          console.log('push work')
     }
 }
