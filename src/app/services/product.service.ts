@@ -9,8 +9,8 @@ export class productService {
 
   getProduct(): Product[] {
     return [
-      new Product ('Roller', 25, 2, 'cardboard box 20x20x10' ),
-      new Product ('Сorner', 5, 10, 'tied with a rope' ),
+      new Product (1, 'Roller', 25, 2, 'cardboard box 20x20x10' ),
+      new Product (2, 'Сorner', 5, 10, 'tied with a rope' ),
     ];
   }
 

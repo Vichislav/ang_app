@@ -1,28 +1,8 @@
-<div>
-  <h1>{{title}}</h1>
-</div>
-
-<div>
-  Имя<input [(ngModel)]="name" type="text">
-  Возраст<input [(ngModel)]="age" type="number">
-
-  <button (click)="addUser()">Сохранить</button>
-</div>
-
-<table>
-  <thead>
-  <tr>
-    <th>Имя</th>
-    <th>Возраст</th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of users">
-      <td>{{item.name}}</td>
-      <td>{{item.age}}</td>
-    </tr>
-  </tbody>
-</table>
-<div>
-  <app-products></app-products>
+<div class="app-root">
+  <div>
+    <h1>{{title}}</h1>
+  </div>
+  <div>
+    <app-products></app-products>
+  </div>
 </div>

@@ -8,8 +8,9 @@ import {productService} from "../services/product.service";
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  title = 'Warehouse';
+  title = 'Склад';
 
+  id: number = 0;
   name: string = '';
   price: number = 0;
   amount: number = 0;
@@ -21,11 +22,16 @@ export class ProductsComponent {
     this.products = this.productService.getProduct();
   }
   addProduct(): void {
-    this.products.push(new Product(this.name, this.price, this.amount, this.description))
+    this.products.push(new Product(this.id, this.name, this.price, this.amount, this.description))
     this.clearProduct()
     console.log('push product work')
   }
+  deleteProduct(): void {
+    let counter: number = this.id;
+    this.products.splice(counter,1);
+  }
   clearProduct(): void {
+    this.id = 0;
     this.name = '';
     this.price = 0;
     this.amount = 0;
