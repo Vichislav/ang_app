@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { ProductsComponent } from './products/products.component';
 import { SelectorComponent } from './selector/selector.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    SelectorComponent
+    SelectorComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
